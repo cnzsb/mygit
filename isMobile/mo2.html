@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    	var device = {
+    		Android : /android/i,
+    		iOS : /(iPhone|iPad|iPod|iOS)/i,
+    		WP : /(Windows Phone|Nokia)/i,
+    		oPhone : /MicroMessenger/i
+    	};
+
+    	var ua = navigator.userAgent;
+    	var result = device.Android.test(ua) || device.iOS.test(ua) || device.WP.test(ua) || device.oPhone.test(ua);
+    	var kf = document.getElementById("kfqq");
+
+    	result ? kf.href ="http://dft.zoosnet.net/LR/Chatpre.aspx?id=DFT90976591&lng=cn" : kf.href ="http://crm2.qq.com/page/portalpage/wpa.php?uin=4000215555&aty=2&a=3&curl=&ty=1";
+
+
+    //手机端判断各个平台浏览器及操作系统平台
+    function checkPlatform() {
+        if (/android/i.test(navigator.userAgent)) {
+            return "This is Android'browser."; //这是Android平台下浏览器
+        }
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            return "This is iOS'browser."; //这是iOS平台下浏览器
+        }
+        if (/(Windows Phone|Nokia)/i.test(navigator.userAgent)) {
+            return "This is WP'browser."; //这是windows phone
+        }
+        if (/Linux/i.test(navigator.userAgent)) {
+            return "This is Linux'browser."; //这是Linux平台下浏览器
+        }
+        if (/Linux/i.test(navigator.platform)) {
+            return "This is Linux operating system."; //这是Linux操作系统平台
+        }
+        if (/MicroMessenger/i.test(navigator.userAgent)) {
+            return "This is MicroMessenger'browser."; //这是微信平台下浏览器
+        }
+        return "PC";
+    }
+    document.writeln("您的操作系统是：" + checkPlatform());
+    alert(checkPlatform());
+    </script>
+</body>
+
+</html>
