@@ -1,3 +1,8 @@
+@font-face{
+    font-family: BHITC;
+    src: url('fonts/Bradley Hand ITC.TTF');
+}
+
 /* 首屏 */
 
 #start {
@@ -39,7 +44,7 @@
 }
 
 .start-content h2 {
-    font-family: "Bradley Hand ITC", serif;
+    font-family: "BHITC", serif;
     font-size: 15px;
     padding: 20px 0;
 }
